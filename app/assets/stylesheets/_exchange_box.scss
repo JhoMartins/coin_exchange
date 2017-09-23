@@ -1,0 +1,20 @@
+.exchange_box{
+  .card{
+    border: 0;
+    .card-header{
+        background-color: #878d99;
+        color: white;
+        font-weight: 700;
+      }
+  }
+  .card-block{
+    padding: 15px;
+    .title{
+      color: #878d99;
+      font-weight: 700;
+     }
+     .btn-exchange{
+         border-color: #5bc0de;
+       }
+   }
+}
