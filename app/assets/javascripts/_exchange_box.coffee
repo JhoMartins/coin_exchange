@@ -4,6 +4,11 @@ $(document).ready ->
   quantity = $("#quantity")
   currency_destination = $("#currency_destination")
 
+  $("#exchange_icon").click ->
+    currency_value = currency.val()
+    currency.val(currency_destination.val())
+    currency_destination.val(currency_value)
+
   currency.change ->
     if quantity.val() != 0
       form.submit()

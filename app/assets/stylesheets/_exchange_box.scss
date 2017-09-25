@@ -14,7 +14,14 @@
       font-weight: 700;
      }
      .btn-exchange{
-         border-color: #5bc0de;
+       border-color: #5bc0de;
+      }
+     .exchange_destination {
+       text-align: center;
+       color: #878d99;
+       #exchange_icon {
+         cursor: pointer;
        }
+     }
    }
 }
