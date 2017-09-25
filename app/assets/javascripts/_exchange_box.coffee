@@ -1,13 +1,29 @@
 $(document).ready ->
-  $('form').submit ->
-    if $('form').attr('action') == '/exchange'
+  form = $('form')
+  currency = $("#currency")
+  quantity = $("#quantity")
+  currency_destination = $("#currency_destination")
+
+  currency.change ->
+    if quantity.val() != 0
+      form.submit()
+
+  currency_destination.change ->
+    if quantity.val() != 0
+      form.submit()
+
+  quantity.keyup ->
+    form.submit()
+
+  form.submit ->
+    if form.attr('action') == '/exchange'
       $.ajax '/exchange',
           type: 'POST'
           dataType: 'json'
           data: {
-                  currency: $("#currency").val(),
-                  currency_destination: $("#currency_destination").val(),
-                  quantity: $("#quantity").val()
+                  currency: currency.val(),
+                  currency_destination: currency_destination.val(),
+                  quantity: quantity.val()
                 }
           error: (jqXHR, textStatus, errorThrown) ->
             alert textStatus
