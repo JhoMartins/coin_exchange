@@ -8,17 +8,19 @@ $(document).ready ->
     currency_value = currency.val()
     currency.val(currency_destination.val())
     currency_destination.val(currency_value)
+    check_quantity()
 
   currency.change ->
-    if quantity.val() != 0
-      form.submit()
+    check_quantity()
 
   currency_destination.change ->
-    if quantity.val() != 0
-      form.submit()
+    check_quantity()
 
   quantity.keyup ->
     form.submit()
+
+  check_quantity = -> if quantity.val() != 0
+                        form.submit()
 
   form.submit ->
     if form.attr('action') == '/exchange'
