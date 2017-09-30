@@ -3,6 +3,7 @@ $(document).ready ->
   currency = $("#currency")
   quantity = $("#quantity")
   currency_destination = $("#currency_destination")
+
   generate_chart = ->
     $.ajax '/quota_period',
         type: 'POST'
@@ -20,8 +21,8 @@ $(document).ready ->
             data: {
                 x: 'x',
                 columns: [
-                    ['x', data,data.date[0], data.date[2], data.date[3], data.date[4], data.date[5], data.date[6]],
-                    ['Cotação', data.value[0], data.value[1], data.value[2], data.value[3], data.value[4], data.value[5], data.value[6]]
+                    ['x', data,data.date[0], data.date[1], data.date[2], data.date[3], data.date[4], data.date[5], data.date[6], data.date[7]],
+                    ['Cotação', data.value[0], data.value[1], data.value[2], data.value[3], data.value[4], data.value[5], data.value[6], data.value[7]]
                 ]
             },
             axis: {

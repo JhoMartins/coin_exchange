@@ -36,4 +36,5 @@ $(document).ready ->
             alert textStatus
           success: (data, text, jqXHR) ->
             $('#result').val(data.value)
+            $('#currency_quota').text('Taxa de conversão: 1 BRL > '+ data.currency_quota + ' ' + currency_destination.val())
         return false;
