@@ -6,4 +6,10 @@ class HomeController < ApplicationController
     value = Currency::exchange params[:currency], params[:currency_destination], params[:quantity].to_f
     render json: {"value": value}
   end
+
+  def quota_period
+    hash = Currency::quota_period params[:currency], params[:currency_destination]
+    puts hash
+    render json: hash
+  end
 end
