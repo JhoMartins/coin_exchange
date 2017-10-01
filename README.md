@@ -27,3 +27,7 @@ You can download or clone this repository and run the following commands:
 3 - docker-compose run --rm rake db:migrate
 4 - docker compose up
 ```
+### TODO
+- Fixes responsive layout in mobile
+- Improvements in layout
+- Implements JS tests with Rspec and Capybara
