@@ -16,4 +16,6 @@
 //= require tether
 //= require popper
 //= require bootstrap
+//= require d3.min
+//= require c3
 //= require_tree .
